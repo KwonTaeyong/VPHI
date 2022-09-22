@@ -1,0 +1,149 @@
+{% load static %}
+<div class="menu-box hide"><a href="/">
+</a>
+    <div class="mobile-mypage"><a href="/">
+    </a>
+        <ul><a href="/">
+        </a>
+            <li class="adm"><a href="/"></a><a href="/admin/admin01_01.php">관리자</a></li>
+            <li class="home"><a href="/">발주 홈으로</a></li>
+            <li><a href="../cart/cart.html" class="cart">장바구니<span>0</span></a></li>
+            <li><a href="../mypage01/mypage01_01.html">마이페이지</a></li>
+            <li><a href="#">로그아웃</a></li>
+        </ul>
+    </div>
+    <nav class="accordion-menu">
+        <ul>
+            <li>
+                <div class="dropdownlink dropdownlink1"><i class="fa-solid fa-desktop" aria-hidden="true"></i>기준정보
+                </div>
+                <ul class="submenuItems">
+                    <li><a href="../sub02/sub01_01.html">부서관리</a></li>
+                    <li><a href="../sub02/sub02_01.html">사용자관리</a></li>
+                    <li><a href="../sub02/sub03_01.html">거래처관리</a></li>
+                    <li><a href="../sub02/sub04_01.html">대분류관리</a></li>
+                    <li><a href="../sub02/sub05_01.html">창고관리</a></li>
+                    <a href="../sub02/sub06_01.html">위치관리</a>
+                    <li><a href="../sub02/sub06_01.html">제품관리</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="dropdownlink dropdownlink1"><i class="fa-solid fa-circle-check" aria-hidden="true"></i>입고관리
+                </div>
+                <ul class="submenuItems">
+                    <li><a href="../sub03/sub01_01.html">입고 예정 정보 등록</a></li>
+                    <li><a href="../sub03/sub02_01.html">바코드 발행</a></li>
+                    <li><a href="../sub03/sub03_01.html">입고처리</a></li>
+                    <li><a href="../sub03/sub03_01.html">입고취소</a></li>
+                    <li><a href="../sub03/sub03_01.html">입고조회</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="dropdownlink dropdownlink1"><i class="fa-solid fa-file" aria-hidden="true"></i>재고관리
+                </div>
+                <ul class="submenuItems">
+                    <li><a href="../sub04/sub01_01.html">위치이동</a></li>
+                    <li><a href="{% url 'VPHI:WareHouse' %}">창고 레이아웃 관리</a></li>
+                    <li><a href="../sub04/sub03_01.html">재고조정</a></li>
+                    <li><a href="../sub04/sub04_01.html">렉 관리</a></li>
+                    <li><a href="../sub04/sub05_01.html">재고조회</a></li>
+                    <li><a href="../sub04/sub05_01.html">렉 조회</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="dropdownlink dropdownlink1"><i class="fa-solid fa-pen-to-square" aria-hidden="true"></i>출고관리
+                </div>
+                <ul class="submenuItems">
+                    <li><a href="../sub05/sub01_01.html">출고 예정 정보 등록</a></li>
+                    <li><a href="../sub05/sub02_01.html">출고 관리</a></li>
+                    <li><a href="../sub05/sub03_01.html">출고 취소</a></li>
+                    <li><a href="">출고 조회</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="dropdownlink dropdownlink1"><i class="fa-solid fa-pen-to-square" aria-hidden="true"></i>통계
+                </div>
+            </li>
+
+            <li class="my-page-nav">
+                <div class="dropdownlink dropdownlink1"><i class="fa-solid fa-desktop" aria-hidden="true"></i> 대리점리포트 <i
+                        class="fa fa-chevron-down" aria-hidden="true"></i>
+                </div>
+                <ul class="submenuItems lay">
+                    <li><p class="tlt">송월타월(주), (주)송월</p></li>
+                    <li><a href="../mypage02/mypage01_01.html">연도별 판매현황</a></li>
+                    <li><a href="../mypage02/mypage01_02.html">전년대비 매출 비교</a></li>
+                    <li><a href="../mypage02/mypage01_03.html">분기 리베이트 현황</a></li>
+                    <li><a href="../mypage02/mypage01_04.html">제품별 순위 현황</a></li>
+                    <li class="line"></li>
+                    <li><p class="tlt">우산전용</p></li>
+                    <li><a href="../mypage02/mypage02_01.html">연도별 판매현황(우산)</a></li>
+                    <li><a href="../mypage02/mypage02_02.html">전년대비 매출 비교(우산)</a></li>
+                    <li><a href="../mypage02/mypage02_03.html">월별 리베이트 현황(우산)</a></li>
+                    <li><a href="../mypage02/mypage02_04.html">제품별 순위 현황</a></li>
+                    <li class="line"></li>
+                    <li><p class="tlt">판매상세</p></li>
+                    <li><a href="../mypage02/mypage03_01.html">판매상세</a></li>
+                    <li class="mb-lay"><a href="../mypage02/mypage03_04.html">판매상세 기간별 조회</a></li>
+                </ul>
+            </li>
+            <li class="adm-lay">
+                <a class="dropdownlink" href="../admin/admin01_01.html"><i class="fa-solid fa-comment-dots"
+                                                                           aria-hidden="true"></i>
+                    일반품 공지문구 </a>
+            </li>
+            <li class="adm-lay">
+                <a class="dropdownlink" href="../admin/admin02_01.html"><i class="fa-solid fa-ban"></i>
+                    대리점 발주 제한 리스트 </a>
+            </li>
+            <li class="adm-lay">
+                <div class="dropdownlink dropdownlink1"><i class="fa-solid fa-pen-to-square" aria-hidden="true"></i>
+                    제품발주 <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                </div>
+                <ul class="submenuItems">
+                    <li><a href="../admin/admin03_01.html">대리점별 전체 리스트</a></li>
+                    <li><a href="../admin/admin03_02.html">제품관리</a></li>
+                    <li><a href="../admin/admin03_03.html">pp관리 </a></li>
+                    <li><a href="../admin/admin03_04.html">행사제품</a></li>
+                </ul>
+            </li>
+            <li class="adm-lay">
+                <div class="dropdownlink dropdownlink1"><i class="fa-solid fa-clone"></i> 팝업 <i
+                        class="fa fa-chevron-down" aria-hidden="true"></i>
+                </div>
+                <ul class="submenuItems">
+                    <li><a href="../admin/admin04_01.html">팝업 등록</a></li>
+                    <li><a href="../admin/admin04_02.html">팝업 리스트</a></li>
+                </ul>
+            </li>
+            <li class="adm-lay">
+                <div class="dropdownlink dropdownlink1"><i class="fa-solid fa-file-circle-check"></i> 설문 <i
+                        class="fa fa-chevron-down" aria-hidden="true"></i>
+                </div>
+                <ul class="submenuItems">
+                    <li><a href="../admin/admin05_01.html">설문지 등록</a></li>
+                    <li><a href="../admin/admin05_02.html">설문지 리스트</a></li>
+                    <li><a href="../admin/admin05_03.html">통합 만족도 조사 설문결과</a></li>
+                    <li><a href="../admin/admin05_04.html">주문 만족도 조사 설문결과</a></li>
+                </ul>
+            </li>
+            <li class="adm-lay">
+                <a class="dropdownlink" href="../admin/admin06_01.html"><i class="fa-solid fa-circle-check"></i>
+                    특판정보관리 </a>
+            </li>
+            <li class="adm-lay">
+                <a class="dropdownlink" href="../admin/admin07_01.html"><i class="fa-solid fa-truck"></i>
+                    직송정보관리 </a>
+            </li>
+            <li class="adm-lay">
+                <a class="dropdownlink" href="../admin/admin09_01.html"><i class="fa-solid fa-circle-minus"></i>
+                    일반품 예약 제한 리스트 </a>
+            </li>
+            <!--li class="adm-lay">
+                <a class="dropdownlink" href=""><i class="fa-solid fa-box-archive"></i>
+                    제품관리                </a>
+            </li-->
+
+        </ul>
+    </nav>
+</div>

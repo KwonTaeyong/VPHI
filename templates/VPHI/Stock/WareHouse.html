@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="main-panel">
+        <section class="notice panel" style="height: 80px;">
+            <h2 class="main-tlt">창고 레이아웃 관리</h2>
+            <a href="#" class="more">더보기</a>
+        </section>
+
+        <section class="notice panel" style="height: 1500px;">
+            <div class="container">
+                <div id="board"></div>
+            </div>
+            <div class="controls"><a class="view-top" onclick="sokoban.restart()"></a>
+                <a onclick="sokoban.rotate(false)">왼쪽</a><a onclick="sokoban.rotate(true)">오른쪽</a>
+                <a class="not-low-quality" onclick="sokoban.toggleQuality()">숨기기</a>
+            </div>
+            <div class="hidden" id="success-message">Well done!</div>
+            <div id="player-markup" style="display:none">
+                <!--    <div class="head">-->
+                <!--        <div class="box-wall box-wall-1">-->
+                <!--            <div class="box-roof">-->
+                <!--                <div class="hat">-->
+                <!--                    <div class="hat__top">-->
+                <!--                        <div class="hat__band">-->
+                <!--                            <div>-->
+                <!--                                <div>-->
+                <!--                                    <div>-->
+                <!--                                        <div class="hat__roof"></div>-->
+                <!--                                    </div>-->
+                <!--                                </div>-->
+                <!--                            </div>-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                </div>-->
+                <!--            </div>-->
+                <!--        </div>-->
+                <!--        <div class="box-wall box-wall-2">-->
+                <!--            <div class="eyes">-->
+                <!--                <div class="eye"></div>-->
+                <!--                <div class="eye"></div>-->
+                <!--            </div>-->
+                <!--            <div class="mouth"></div>-->
+                <!--        </div>-->
+                <!--        <div class="box-wall box-wall-3"></div>-->
+                <!--        <div class="box-wall box-wall-4"></div>-->
+                <!--    </div>-->
+            </div>
+            <div id="box-markup" style="display:none">
+                <div class="box-wall box-wall-1">
+                    <div type="button" class="box-roof" style="cursor: pointer" data-bs-toggle="modal"
+                         data-bs-target="#exampleModal">
+                    </div>
+                </div>
+                <div type="button" class="box-wall box-wall-2" style="cursor: pointer; background-color: gray"
+                     data-bs-toggle="modal"
+                     data-bs-target="#exampleModal3">
+
+                </div>
+
+                <div type="button" class="box-wall box-wall-3" style="cursor: pointer; background-color: #1C4561"
+                     data-bs-toggle="modal"
+                     data-bs-target="#exampleModal2">
+
+                </div>
+                <div class="box-wall box-wall-4"></div>
+            </div>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">B동 창고</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <table>
+                                <thead>
+                                <tr>
+                                    <th>렉 정보</th>
+                                    <th>제품 정보</th>
+                                    <th>제품 수량</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td data-label="First Name">A-01</td>
+                                    <td data-label="Last Name">테스트 제품</td>
+                                    <td data-label="Hero Title"><input style="width: 100%" type="text" value="1.022">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-label="First Name">A-02</td>
+                                    <td data-label="Last Name">테스트 제품</td>
+                                    <td data-label="Hero Title"><input style="width: 100%" type="text" value="1.022">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-label="First Name">A-03</td>
+                                    <td data-label="Last Name">테스트 제품</td>
+                                    <td data-label="Hero Title"><input style="width: 100%" type="text" value="1.022">
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+                            <button type="button" class="btn btn-primary">저장</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+{% endblock %}
+
