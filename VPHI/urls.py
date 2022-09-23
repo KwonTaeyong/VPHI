@@ -21,6 +21,7 @@ urlpatterns = [
     path('sub02/sub02_03', sub02.sub02_03, name='SUB02_03'),
     path('sub02/sub02_04', sub02.sub02_04, name='SUB02_04'),
     path('sub02/sub02_05', sub02.sub02_05, name='SUB02_05'),
+    # path('barcode_reder', sub02.barcode_reader, name='barcode_reader'),
 
     path('sub03/sub03_01', sub03.sub03_01, name='SUB03_01'),
     path('sub03/sub03_02', sub03.sub03_02, name='SUB03_02'),

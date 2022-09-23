@@ -7,5 +7,45 @@
             <h2 class="main-tlt">바코드 발행</h2>
             <a href="#" class="more">더보기</a>
         </section>
+{#    QR코드 생성#}
+        <section class="notice panel" style="height: 300px;">
+            <h1>QR코드 생성</h1>
+
+            <div style="margin: 20px 0;">
+                <form action="{% url 'VPHI:SUB02_02' %}" method="post">
+                    {% csrf_token %}
+                    <input style="width: 400px;" type="text" name="CodeUrl" placeholder="코드를 입력해주세요."/>
+                    <input style="width: 100px;" type="submit" value="QR생성">
+{#                    <a style="width: 100px;" type="button" href="{% url 'VPHI:barcode_reader' %}">코드 리더기</a>#}
+                    <input type="button" value="인쇄" id="print">
+                </form>
+            </div>
+            <div style="margin: 20px 0;">
+                {% if success %}
+                    <div id="printarea">
+                        <img style="width: 150px; height: 150px;" src="/{{ qrlink }}"/><br>
+                    </div>
+                {% else %}
+                    <p>QR을 생성하세요</p>
+                {% endif %}
+            </div>
+        </section>
+
+
+
     </div>
+{% endblock %}
+{% block script %}
+    <script>
+        $("#print").on('click', function () {
+            let inbody = document.body.innerHTML;
+            window.onbeforeprint = function () {
+                document.body.innerHTML = document.getElementById('printarea').innerHTML;
+            }
+            window.onafterprint = function () {
+                document.body.innerHTML = inbody;
+            }
+            window.print();
+        })
+    </script>
 {% endblock %}
