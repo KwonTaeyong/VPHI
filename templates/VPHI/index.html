@@ -2,5 +2,189 @@
 {% load static %}
 
 {% block content %}
-    <div> 테스트 중입니다. </div>
+    <div class="main-panel">
+
+        <section class="notice panel">
+            <h2 class="main-tlt">공지사항</h2>
+            <ul class="notice-list">
+                <li>
+                    <em>!</em>
+                    <a href="#">TEXT</a>
+                </li>
+            </ul>
+            <a href="#" class="more">더보기</a>
+        </section>
+        <div class="main-row">
+            <section class="amount panel">
+                <h2 class="main-tlt">창고적재률</h2>
+                <ul class="amount-list">
+                    <li>
+                        <strong class="tlt">A동</strong>
+                        <input type="text" value="70%">
+                    </li>
+                    <li>
+                        <strong class="tlt">B동</strong>
+                        <input type="text" value="80%">
+                    </li>
+                    <li>
+                        <strong class="tlt">기준일</strong>
+                        <input type="text" value="2021-07-10">
+                    </li>
+                </ul>
+                <a href="{% url 'VPHI:SUB01_05' %}" class="more">더보기</a>
+            </section>
+            <section class="banner">
+                <ul>
+                    <li class="c1">
+                        <a href="{% url 'VPHI:SUB02_03' %}">
+                            <span><img src="http://vphi.nowonlab.com/img/main-ico1.png" alt=""></span>입고
+                        </a>
+                    </li>
+                    <li class="c2">
+                        <a href="{% url 'VPHI:SUB02_03' %}">
+                            <span><img src="http://vphi.nowonlab.com/img/main-ico2.png" alt=""></span>입고대기
+                        </a>
+                    </li>
+                    <li class="c3">
+                        <a href="{% url 'VPHI:SUB04_02' %}">
+                            <span><img src="http://vphi.nowonlab.com/img/main-ico3.png" alt=""></span>출고
+                        </a>
+                    </li>
+                    <li class="c4">
+                        <a href="{% url 'VPHI:SUB04_04' %}">
+                            <span><img src="http://vphi.nowonlab.com/img/main-ico4.png" alt=""></span>출고대기
+                        </a>
+
+                    </li><li class="c5">
+                        <a href="{% url 'VPHI:SUB04_03' %}">
+                            <span><img src="http://vphi.nowonlab.com/img/main-ico3.png" alt=""></span>출고완료
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <div class="main-row2">
+            <section class="tab-list">
+                <h2 class="skip">발주리스트</h2>
+                <div class="content">
+                    <ul class="tab_wrap tab_wrap1">
+                        <li class="active" data-tab="tab1" data-type="" data-tab_num="1">
+                            <button type="button" class="wow fadeIn" data-wow-duration="1s">
+                                미확정 전표 현황</button>
+                        </li>
+                        <li data-tab="tab2" data-type="1" data-tab_num="2">
+                            <button type="button" class="wow fadeIn" data-wow-duration="1s">
+                                발주리스트
+                        </button></li>
+                    </ul>
+                    <div id="tab1" class="tab_cont tab_cont1 active panel">
+                        <div class="scroll">
+                            <table class="tb-de">
+                                <tbody><tr>
+                                    <th>구분</th>
+                                    <th>입고</th>
+                                    <th>출고</th>
+                                    <th>재고이동</th>
+                                </tr>
+                                <tr>
+                                    <td>당일</td>
+                                    <td>4</td>
+                                    <td>7</td>
+                                    <td>9</td>
+
+                                </tr><tr>
+                                    <td>이전</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+
+                                </tr>
+                                <tr>
+                                    <td>합계</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+
+                                </tr>
+                            </tbody></table>
+                        </div>
+                        <a href="#" class="more">더보기</a>
+                    </div>
+                    <div id="tab2" class="tab_cont tab_cont1 panel">
+                        <div class="scroll">
+                            <table class="tb-de">
+                                <tbody><tr>
+                                    <th>발주번호</th>
+                                    <th>제목</th>
+                                    <th>기안일</th>
+                                    <th>상태</th>
+                                </tr>
+                                    <tr><td>1949604015823</td>
+                                    <td>7/6일(수) 발주 요청건</td>
+                                    <td>2021-07-05</td>
+                                    <td>발주확정</td>
+                                </tr>
+                                <tr>
+                                    <td>4960721041062</td>
+                                    <td>7/8일(금) 발주 요청건</td>
+                                    <td>2021-07-05</td>
+                                    <td>출고대기</td>
+                                </tr>
+                                    <tr><td>6280931852581</td>
+                                    <td>7/9일(토) 발주 요청건</td>
+                                    <td>2021-07-05</td>
+                                    <td>발주완료</td>
+                                </tr>
+                            </tbody></table>
+                        </div>
+                        <a href="#" class="more">더보기</a>
+                    </div>
+                </div>
+            </section>
+            <section class="tab-list tab-list2">
+                <h2 class="skip">발주리스트</h2>
+                <div class="content">
+                    <ul class="tab_wrap tab_wrap2">
+                        <li class="active" data-tab="tab4" data-type="" data-tab_num="1">
+                            <button type="button" class="wow fadeIn" data-wow-duration="1s">
+                                Null
+                            </button>
+                        </li>
+                        <li data-tab="tab5" data-type="1" data-tab_num="2">
+                            <button type="button" class="wow fadeIn" data-wow-duration="1s">
+                                Null
+                            </button>
+                        </li>
+                        <li data-tab="tab6" data-type="2" data-tab_num="3">
+                            <button type="button" class="wow fadeIn" data-wow-duration="1s">
+                                Null
+                            </button>
+                        </li>
+                        <li data-tab="tab7" data-type="2" data-tab_num="3">
+                            <button type="button" class="wow fadeIn" data-wow-duration="1s">
+                                Null
+                            </button>
+                        </li>
+                    </ul>
+                    <div id="tab4" class="tab_cont tab_cont2 active panel">
+                        <div class="graph-box">
+                        </div>
+                        <a href="#" class="more">더보기</a>
+                    </div>
+                    <div id="tab5" class="tab_cont tab_cont2 panel">
+                        <div class="graph-box"></div>
+                        <a href="#" class="more">더보기</a>
+                    </div>
+                    <div id="tab6" class="tab_cont tab_cont2 panel">
+                        <div class="graph-box"></div>
+                        <a href="#" class="more">더보기</a>
+                    </div>
+                    <div id="tab7" class="tab_cont tab_cont2 panel">
+                        <div class="graph-box"></div>
+                        <a href="#" class="more">더보기</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
 {% endblock %}

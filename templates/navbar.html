@@ -18,51 +18,54 @@
                 <div class="dropdownlink dropdownlink1"><i class="fa-solid fa-desktop" aria-hidden="true"></i>기준정보
                 </div>
                 <ul class="submenuItems">
-                    <li><a href="../sub02/sub01_01.html">부서관리</a></li>
-                    <li><a href="../sub02/sub02_01.html">사용자관리</a></li>
-                    <li><a href="../sub02/sub03_01.html">거래처관리</a></li>
-                    <li><a href="../sub02/sub04_01.html">대분류관리</a></li>
-                    <li><a href="../sub02/sub05_01.html">창고관리</a></li>
-                    <a href="../sub02/sub06_01.html">위치관리</a>
-                    <li><a href="../sub02/sub06_01.html">제품관리</a></li>
+                    <li><a href="{% url 'VPHI:SUB01_01' %}">부서관리</a></li>
+                    <li><a href="{% url 'VPHI:SUB01_02' %}">사용자관리</a></li>
+                    <li><a href="{% url 'VPHI:SUB01_03' %}">거래처관리</a></li>
+                    <li><a href="{% url 'VPHI:SUB01_04' %}">대분류관리</a></li>
+                    <li><a href="{% url 'VPHI:SUB01_05' %}">창고관리</a></li>
+                    <a href="{% url 'VPHI:SUB01_06' %}">위치관리</a>
+                    <li><a href="{% url 'VPHI:SUB01_07' %}">제품관리</a></li>
                 </ul>
             </li>
             <li>
                 <div class="dropdownlink dropdownlink1"><i class="fa-solid fa-circle-check" aria-hidden="true"></i>입고관리
                 </div>
                 <ul class="submenuItems">
-                    <li><a href="../sub03/sub01_01.html">입고 예정 정보 등록</a></li>
-                    <li><a href="../sub03/sub02_01.html">바코드 발행</a></li>
-                    <li><a href="../sub03/sub03_01.html">입고처리</a></li>
-                    <li><a href="../sub03/sub03_01.html">입고취소</a></li>
-                    <li><a href="../sub03/sub03_01.html">입고조회</a></li>
+                    <li><a href="{% url 'VPHI:SUB02_01' %}">입고 예정 정보 등록</a></li>
+                    <li><a href="{% url 'VPHI:SUB02_02' %}">바코드 발행</a></li>
+                    <li><a href="{% url 'VPHI:SUB02_03' %}">입고처리</a></li>
+                    <li><a href="{% url 'VPHI:SUB02_04' %}">입고취소</a></li>
+                    <li><a href="{% url 'VPHI:SUB02_05' %}">입고조회</a></li>
                 </ul>
             </li>
             <li>
                 <div class="dropdownlink dropdownlink1"><i class="fa-solid fa-file" aria-hidden="true"></i>재고관리
                 </div>
                 <ul class="submenuItems">
-                    <li><a href="../sub04/sub01_01.html">위치이동</a></li>
-                    <li><a href="{% url 'VPHI:WareHouse' %}">창고 레이아웃 관리</a></li>
-                    <li><a href="../sub04/sub03_01.html">재고조정</a></li>
-                    <li><a href="../sub04/sub04_01.html">렉 관리</a></li>
-                    <li><a href="../sub04/sub05_01.html">재고조회</a></li>
-                    <li><a href="../sub04/sub05_01.html">렉 조회</a></li>
+                    <li><a href="{% url 'VPHI:SUB03_01' %}">위치이동</a></li>
+                    <li><a href="{% url 'VPHI:SUB03_02' %}">창고 레이아웃 관리</a></li>
+                    <li><a href="{% url 'VPHI:SUB03_03' %}">재고조정</a></li>
+                    <li><a href="{% url 'VPHI:SUB03_04' %}">렉 관리</a></li>
+                    <li><a href="{% url 'VPHI:SUB03_05' %}">재고조회</a></li>
+                    <li><a href="{% url 'VPHI:SUB03_06' %}">렉 조회</a></li>
                 </ul>
             </li>
             <li>
                 <div class="dropdownlink dropdownlink1"><i class="fa-solid fa-pen-to-square" aria-hidden="true"></i>출고관리
                 </div>
                 <ul class="submenuItems">
-                    <li><a href="../sub05/sub01_01.html">출고 예정 정보 등록</a></li>
-                    <li><a href="../sub05/sub02_01.html">출고 관리</a></li>
-                    <li><a href="../sub05/sub03_01.html">출고 취소</a></li>
-                    <li><a href="">출고 조회</a></li>
+                    <li><a href="{% url 'VPHI:SUB04_01' %}">출고 예정 정보 등록</a></li>
+                    <li><a href="{% url 'VPHI:SUB04_02' %}">출고 관리</a></li>
+                    <li><a href="{% url 'VPHI:SUB04_03' %}">출고 취소</a></li>
+                    <li><a href="{% url 'VPHI:SUB04_04' %}">출고 조회</a></li>
                 </ul>
             </li>
             <li>
                 <div class="dropdownlink dropdownlink1"><i class="fa-solid fa-pen-to-square" aria-hidden="true"></i>통계
                 </div>
+                <ul class="submenuItems">
+                    <li><a href="{% url 'VPHI:SUB05_01' %}">통계</a></li>
+                </ul>
             </li>
 
             <li class="my-page-nav">
