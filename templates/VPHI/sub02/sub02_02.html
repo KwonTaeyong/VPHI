@@ -7,7 +7,7 @@
             <h2 class="main-tlt">바코드 발행</h2>
             <a href="#" class="more">더보기</a>
         </section>
-{#    QR코드 생성#}
+        {#    QR코드 생성#}
         <section class="notice panel" style="height: 300px;">
             <h1>QR코드 생성</h1>
 
@@ -15,8 +15,8 @@
                 <form action="{% url 'VPHI:SUB02_02' %}" method="post">
                     {% csrf_token %}
                     <input style="width: 400px;" type="text" name="CodeUrl" placeholder="코드를 입력해주세요."/>
-                    <input style="width: 100px;" type="submit" value="QR생성">
-{#                    <a style="width: 100px;" type="button" href="{% url 'VPHI:barcode_reader' %}">코드 리더기</a>#}
+                    <input style="width: 120px;" type="submit" value="QR코드 생성">
+                    {#                    <a style="width: 100px;" type="button" href="{% url 'VPHI:barcode_reader' %}">코드 리더기</a>#}
                     <input type="button" value="인쇄" id="print">
                 </form>
             </div>
@@ -31,16 +31,48 @@
             </div>
         </section>
 
+        <section class="notice panel" style="height: 300px;">
+            <h1>바코드 생성</h1>
+
+            <div style="margin: 20px 0;">
+                <input style="width: 400px" type="text" name="txt_input" id="txt_input">
+                <button style="width: 100px" type="button" id="btn_generate">바코드 생성</button>
+                <input type="button" value="인쇄" id="print2">
+                <br>
+
+            </div>
+
+            <div id="barcodearea" style="margin: 20px 0;">
+                <svg id="barcode"></svg>
+            </div>
+        </section>
 
 
     </div>
 {% endblock %}
 {% block script %}
     <script>
+        $('#btn_generate').on('click', function () {
+            let text = document.getElementById('txt_input').value;
+            $("#barcodearea").append(JsBarcode("#barcode", text))
+        })
+
+
         $("#print").on('click', function () {
             let inbody = document.body.innerHTML;
             window.onbeforeprint = function () {
                 document.body.innerHTML = document.getElementById('printarea').innerHTML;
+            }
+            window.onafterprint = function () {
+                document.body.innerHTML = inbody;
+            }
+            window.print();
+        })
+
+        $("#print2").on('click', function () {
+            let inbody = document.body.innerHTML;
+            window.onbeforeprint = function () {
+                document.body.innerHTML = document.getElementById('barcodearea').innerHTML;
             }
             window.onafterprint = function () {
                 document.body.innerHTML = inbody;
